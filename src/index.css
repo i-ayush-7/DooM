@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-violet: 139, 92, 246;
+    --brand-emerald: 16, 185, 129;
+    --brand-rose: 244, 63, 94;
+    --bg-main: 5, 5, 5;
+    --bg-card: 15, 15, 17;
+  }
+
+  body {
+    background-color: rgb(var(--bg-main));
+    color: #d4d4d8;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(var(--brand-violet), 0.3);
+    color: #fff;
+  }
+}
+
+/* Glassmorphism Utilities */
+.glass-effect {
+  @apply bg-zinc-900/40 backdrop-blur-md border border-white/5;
+}
+
+.glass-glow-violet {
+  @apply shadow-[0_0_20px_rgba(139,92,246,0.1)];
+}
+
+.glass-glow-emerald {
+  @apply shadow-[0_0_20px_rgba(16,185,129,0.1)];
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Animations */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, transparent, rgba(var(--brand-violet), 0.05), transparent);
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
