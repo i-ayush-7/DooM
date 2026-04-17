@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Bot, Shield, User, Send, Loader2, X, MessageSquare 
+  Bot, Sword, User, Send, Loader2, X, MessageSquare 
 } from 'lucide-react';
 
 export function ChatWidget({ 
@@ -57,7 +57,7 @@ export function ChatWidget({
                         ? 'bg-zinc-800 border-zinc-700' 
                         : 'bg-violet-900/30 border-violet-500/30'
                     }`}>
-                      {msg.role === 'user' ? <User size={14} className="text-zinc-300" /> : <Shield size={14} className="text-violet-400" />}
+                      {msg.role === 'user' ? <User size={14} className="text-zinc-300" /> : <Sword size={14} className="text-violet-400" />}
                     </div>
                     <div className={`max-w-[80%] p-3.5 rounded-2xl text-sm leading-relaxed ${
                       msg.role === 'user' 
@@ -71,7 +71,7 @@ export function ChatWidget({
                 {isChatLoading && (
                   <div className="flex gap-3">
                     <div className="shrink-0 w-8 h-8 rounded-full bg-violet-900/30 border border-violet-500/30 flex items-center justify-center">
-                      <Shield size={14} className="text-violet-400" />
+                      <Sword size={14} className="text-violet-400" />
                     </div>
                     <div className="bg-zinc-900/80 border border-zinc-800/80 p-3.5 rounded-2xl rounded-tl-sm flex items-center gap-3">
                       <Loader2 size={16} className="text-violet-400 animate-spin" />

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Shield, LayoutDashboard, Key, Activity, Settings, ChevronRight
+  Sword, LayoutDashboard, Key, Activity, Settings, ChevronRight
 } from 'lucide-react';
 
 export function Sidebar({ activeTab, setActiveTab }) {
@@ -19,7 +19,7 @@ export function Sidebar({ activeTab, setActiveTab }) {
           whileHover={{ scale: 1.05, rotate: 5 }}
           className="bg-white p-2 rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.1)]"
         >
-          <Shield className="text-black w-6 h-6" strokeWidth={2.5} />
+          <Sword className="text-black w-6 h-6" strokeWidth={2.5} />
         </motion.div>
         <span className="text-2xl font-bold text-white tracking-widest">OKRA</span>
       </div>
